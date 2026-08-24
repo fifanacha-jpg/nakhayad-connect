@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot NAKHAYAD Connect – เชื่อมโยงประชาชนกับสำนักงานเทศบาลตำบลนาขยาด</title>
+
+<!-- ฟอนต์ Sarabun สำหรับภาษาไทย อ่านง่าย เป็นทางการแต่เข้าถึงง่าย -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ========== HEADER ========== -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <div class="brand">
+      <!-- พื้นที่ใส่ตราเทศบาล -->
+       <img src="pt/1.png" width="70" height="70">
+      <div class="brand-text">
+        <span class="brand-title">AI Chatbot NAKHAYAD Connect</span>
+        <span class="brand-sub">เชื่อมโยงประชาชนกับสำนักงานเทศบาลตำบลนาขยาด</span>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <nav class="main-nav" id="mainNav">
+      <a href="#top">หน้าหลัก</a>
+      <a href="#chatbot">แชตกับ AI</a>
+      <a href="#report">แจ้งปัญหา</a>
+      <a href="#contact">ติดต่อเรา</a>
+       
+    </nav>
+
+  </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">ระบบบริการประชาชนดิจิทัล</span>
+      <h1>สวัสดีครับ<br>มีอะไรให้เราช่วยเหลือ?</h1>
+      <p>สอบถามข้อมูลเทศบาล แจ้งปัญหาในพื้นที่ หรือขอคำแนะนำต่าง ๆ ได้ตลอด 24 ชั่วโมง
+        ผ่านผู้ช่วย AI ของเทศบาลตำบลนาขยาด</p>
+      <div class="hero-actions">
+        <a href="#chatbot" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3C7 3 3 6.6 3 11c0 2.4 1.2 4.5 3.1 6L5 21l4.4-1.7c.8.2 1.7.3 2.6.3 5 0 9-3.6 9-8s-4-8.6-9-8.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          เริ่มแชตกับ AI
+        </a>
+        <a href="#report" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16.5h.01M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          แจ้งปัญหา
+        </a>
+      </div>
+    </div>
+
+    <!-- ตัวอย่างหน้าต่างแชตแบบย่อ ใช้เป็นภาพประกอบ Hero -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="chat-preview">
+        <div class="chat-preview-head">
+          <span class="dot"></span> ผู้ช่วย AI นาขยาด
+        </div>
+        <div class="chat-preview-body">
+          <div class="bubble bubble-bot">วันนี้เก็บขยะโซนตลาดครับ 🚛</div>
+          <div class="bubble bubble-user">ชำระภาษีที่ดินได้ที่ไหน?</div>
+          <div class="bubble bubble-bot">ชำระได้ที่กองคลัง ชั้น 1 เทศบาลครับ</div>
+        </div>
+      </div>
+      <!-- ลวดลายคลื่นนาข้าว สื่อถึงชื่อ "นาขยาด" -->
+      <svg class="rice-motif" viewBox="0 0 300 200" aria-hidden="true">
+        <path d="M0 150 Q40 130 80 150 T160 150 T240 150 T300 150 V200 H0 Z" fill="var(--green-mid)" opacity="0.25"/>
+        <path d="M0 170 Q40 155 80 170 T160 170 T240 170 T300 170 V200 H0 Z" fill="var(--blue)" opacity="0.2"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- เส้นแบ่งลายคลื่นนาข้าว องค์ประกอบเอกลักษณ์ของหน้านี้ -->
+  <svg class="section-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 40 C 120 10, 240 70, 360 40 S 600 10, 720 40 S 960 70, 1080 40 S 1320 10, 1440 40 V80 H0 Z" fill="var(--bg-alt)"/>
+  </svg>
+</section>
+
+<!-- ========== AI CHATBOT SECTION ========== -->
+<section class="chatbot-section" id="chatbot">
+  <div class="section-inner">
+    <span class="eyebrow">แชตกับผู้ช่วย AI</span>
+    <h2>ถามอะไรก็ได้เกี่ยวกับเทศบาล</h2>
+    <p class="section-desc">พิมพ์คำถาม หรือกดคำถามด่วนด้านล่าง ระบบจำลองนี้จะช่วยตอบคำถามพื้นฐานให้ทันที</p>
+
+    <div class="quick-questions" id="quickQuestions">
+      <button class="chip" data-q="วันเก็บขยะคือวันไหน?">วันเก็บขยะคือวันไหน?</button>
+      <button class="chip" data-q="ชำระภาษีได้ที่ไหน?">ชำระภาษีได้ที่ไหน?</button>
+      <button class="chip" data-q="แจ้งไฟถนนเสียอย่างไร?">แจ้งไฟถนนเสียอย่างไร?</button>
+      <button class="chip" data-q="ติดต่อเทศบาลได้อย่างไร?">ติดต่อเทศบาลได้อย่างไร?</button>
+    </div>
+
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <span class="chat-avatar">🤖</span>
+          <div>
+            <div class="chat-name">ผู้ช่วย AI นาขยาด</div>
+            <div class="chat-status" id="chatStatus">พร้อมให้บริการ</div>
+          </div>
+        </div>
+        <label class="tts-toggle" title="เปิด/ปิดอ่านคำตอบออกเสียงอัตโนมัติ" style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;white-space:nowrap;">
+          <input type="checkbox" id="autoSpeakToggle" checked>
+          <span>🔊 อ่านอัตโนมัติ</span>
+        </label>
+      </div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="msg-row bot">
+          <span class="msg-avatar">🤖</span>
+          <div class="bubble bubble-bot">
+            สวัสดีครับ ผมคือผู้ช่วย AI ของเทศบาลตำบลนาขยาด สอบถามข้อมูลหรือแจ้งปัญหาได้เลยครับ
+          </div>
+        </div>
+      </div>
+
+      <!-- แสดงสถานะ "AI กำลังพิมพ์..." -->
+      <div class="typing-indicator" id="typingIndicator" hidden>
+        <span class="msg-avatar">🤖</span>
+        <div class="bubble bubble-bot typing">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <form class="chat-input-row" id="chatForm">
+        <button type="button" class="icon-btn mic-btn" id="micBtn" aria-label="พูดเพื่อถาม">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z" stroke="currentColor" stroke-width="1.7"/><path d="M6 11a6 6 0 0 0 12 0M12 19v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+        <input type="text" id="chatInput" placeholder="พิมพ์คำถามของคุณที่นี่..." autocomplete="off">
+        <button type="submit" class="icon-btn send-btn" aria-label="ส่งข้อความ">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12 20 4l-6.5 16-2.7-7-7.8-1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ระบบแจ้งปัญหา ========== -->
+<section class="report-section" id="report">
+  <div class="section-inner">
+    <span class="eyebrow">แจ้งปัญหาในพื้นที่</span>
+    <h2>พบปัญหา แจ้งเราได้ทันที</h2>
+    <p class="section-desc">กรอกรายละเอียด เจ้าหน้าที่จะดำเนินการตรวจสอบและติดต่อกลับโดยเร็วที่สุด</p>
+
+    <form class="report-form" id="reportForm">
+      <div class="form-grid">
+        <label class="field">
+          <span>ชื่อผู้แจ้ง</span>
+          <input type="text" name="reporterName" placeholder="เช่น สมชาย ใจดี" required>
+        </label>
+        <label class="field">
+          <span>ช่องทางติดต่อกลับ</span>
+          <input type="text" name="contact" placeholder="เบอร์โทร หรือ Line ID" required>
+        </label>
+        <label class="field">
+          <span>ประเภทปัญหา</span>
+          <select name="issueType" required>
+            <option value="">— เลือกประเภทปัญหา —</option>
+            <option value="ไฟถนนเสีย">ไฟถนนเสีย</option>
+            <option value="ขยะ">ขยะ</option>
+            <option value="ถนนชำรุด">ถนนชำรุด</option>
+            <option value="น้ำประปา">น้ำประปา</option>
+            <option value="ปัญหาอื่นๆ">ปัญหาอื่น ๆ</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>สถานที่เกิดปัญหา</span>
+          <input type="text" name="location" placeholder="เช่น หมู่ 3 ใกล้วัดนาขยาด" required>
+        </label>
+        <label class="field field-full">
+          <span>รายละเอียดปัญหา</span>
+          <textarea name="detail" rows="4" placeholder="อธิบายลักษณะปัญหาเพิ่มเติม" required></textarea>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-wide">ส่งเรื่องแจ้งปัญหา</button>
+    </form>
+
+    <!-- การ์ดยืนยันการรับเรื่อง แสดงหลังส่งฟอร์มสำเร็จ -->
+    <div class="confirm-card" id="confirmCard" hidden>
+      <div class="confirm-icon">✓</div>
+      <div>
+        <div class="confirm-title">รับเรื่องเรียบร้อยแล้ว</div>
+        <div class="confirm-code">หมายเลขการแจ้ง: <span id="reportId">RP001</span></div>
+        <p class="confirm-note">เจ้าหน้าที่จะติดต่อกลับตามช่องทางที่ท่านให้ไว้ </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== บริการประชาชน ========== -->
+<section class="services-section">
+  <div class="section-inner">
+    <span class="eyebrow">บริการของเรา</span>
+    <h2>บริการประชาชนแบบครบวงจร</h2>
+
+    <div class="service-grid">
+      <a href="#chatbot" class="service-card">
+        <span class="service-icon">💬</span>
+        <h3>สอบถามข้อมูล</h3>
+        <p>ถาม-ตอบเรื่องทั่วไปของเทศบาลผ่าน AI ได้ตลอดเวลา</p>
+      </a>
+      <a href="#report" class="service-card">
+        <span class="service-icon">📢</span>
+        <h3>แจ้งปัญหา</h3>
+        <p>แจ้งปัญหาไฟถนน ขยะ ถนนชำรุด และอื่น ๆ ในพื้นที่</p>
+      </a>
+      <a href="#chatbot" class="service-card">
+        <span class="service-icon">🧾</span>
+        <h3>ชำระภาษี</h3>
+        <p>ตรวจสอบขั้นตอนและช่องทางการชำระภาษีท้องถิ่น</p>
+      </a>
+      <a href="#contact" class="service-card">
+        <span class="service-icon">🏛️</span>
+        <h3>ติดต่อหน่วยงาน</h3>
+        <p>ข้อมูลติดต่อกอง/ฝ่ายต่าง ๆ ภายในเทศบาล</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-brand">
+        <img src="pt/1.png" width="80" height="80">
+      <span>เทศบาลตำบลนาขยาด</span>
+    </div>
+
+    <div class="footer-col">
+      <h4>ที่อยู่</h4>
+      <p>เทศบาลตำบลนาขยาด<br>หมู่ 10 ตำบลนาขยาด<br>อำเภอควนขนุน จังหวัดพัทลุง</p>
+    </div>
+    <div class="footer-col">
+      <h4>ติดต่อ</h4>
+      <p>โทรศัพท์: 0-7484-2666<br>Email:saraban_05930506@dla.go.th</p>
+    </div>
+    <div class="footer-col">
+      <h4>เวลาทำการ</h4>
+      <p>จันทร์ – ศุกร์<br>08:30 – 16:30 น.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2569 เทศบาลตำบลนาขยาด — NAKHAYAD Connect 
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
