@@ -390,11 +390,9 @@ async function sendToBot(userText) {
     } catch (error) {
 
         console.error(error);
-
         typingIndicator.hidden = true;
         chatStatus.textContent = "เกิดข้อผิดพลาด";
-
-        appendMessage("❌ ไม่สามารถเชื่อมต่อ AI ได้", "bot", voiceGender);
+        appendMessage("ไม่สามารถเชื่อมต่อ AI ได้", "bot", voiceGender);
 
     }
 
