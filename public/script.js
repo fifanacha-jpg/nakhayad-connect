@@ -374,22 +374,18 @@ async function sendToBot(userText) {
     });
 
     const rawData = await response.json();
-    
-    // ดึงข้อความตอบกลับจากโครงสร้างของ Gemini
     const botReply = rawData.candidates[0].content.parts[0].text;
 
-    // สร้างตัวแปร data จำลองขึ้นมา เพื่อให้โค้ดบรรทัดล่างๆ ของคุณทำงานต่อได้โดยไม่ต้องแก้เพิ่ม
-    const data = {
-        message: botReply,
-        reply: botReply,
-        response: botReply,
-        text: botReply
+    // เปลี่ยนชื่อตัวแปรใหม่เป็น chatData เพื่อไม่ให้ซ้ำกับของเดิมเด็ดขาด
+    const chatData = {
+        reply: botReply
     };
-       
-        typingIndicator.hidden = true;
-        chatStatus.textContent = "พร้อมให้บริการ";
 
-        appendMessage(data.reply, "bot", voiceGender);
+    typingIndicator.hidden = true;
+    chatStatus.textContent = "พร้อมให้บริการ";
+
+    // เรียกใช้ chatData แทนตัวเก่า
+    appendMessage(chatData.reply, "bot", voiceGender);
 
     } catch (error) {
 
