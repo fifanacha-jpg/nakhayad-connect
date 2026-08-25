@@ -358,20 +358,33 @@ async function sendToBot(userText) {
 
     try {
 
-        const response = await fetch("/chat", {
+         const apiKey = "ใส่_API_KEY_ของคุณที่นี่"; // นำ API Key จาก Google AI Studio มาใส่
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
-            method: "POST",
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            contents: [{
+                parts: [{ text: userText }] // ตัวแปร userText ดึงมาจากโค้ดเดิมของคุณ
+            }]
+        })
+    });
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+    const rawData = await response.json();
+    
+    // ดึงข้อความตอบกลับจากโครงสร้างของ Gemini
+    const botReply = rawData.candidates[0].content.parts[0].text;
 
-            body: JSON.stringify({
-                message: userText
-            })
-
-        });
-
+    // สร้างตัวแปร data จำลองขึ้นมา เพื่อให้โค้ดบรรทัดล่างๆ ของคุณทำงานต่อได้โดยไม่ต้องแก้เพิ่ม
+    const data = {
+        message: botReply,
+        reply: botReply,
+        response: botReply,
+        text: botReply
+    };
         const data = await response.json();
 
         typingIndicator.hidden = true;
