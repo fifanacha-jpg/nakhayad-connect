@@ -357,8 +357,7 @@ async function sendToBot(userText) {
     chatBody.scrollTop = chatBody.scrollHeight;
 
     try {
-
-         const apiKey = "ใส่_API_KEY_ของคุณที่นี่"; // นำ API Key จาก Google AI Studio มาใส่
+         const apiKey = "AQ.Ab8RN6KBCYnVvFzVEspve-TX-9VDnEFvBdFHypSVewjTzybY4w"; // นำ API Key จาก Google AI Studio มาใส่
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     const response = await fetch(url, {
