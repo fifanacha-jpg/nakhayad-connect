@@ -545,5 +545,3 @@ async function sendToBot(userText) {
 
     }
   });
-
-;
