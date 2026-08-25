@@ -359,7 +359,7 @@ async function sendToBot(userText) {
     try {
        
          const apiKey = "AQ.Ab8RN6Kmzej0vH9oErwIV_m_lvL6_cT9SKwBNKcpsOHfXvaCKw"; // นำ API Key จาก Google AI Studio มาใส่
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key="+ apiKey;
 
     const response = await fetch(url, {
         method: "POST",
