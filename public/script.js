@@ -385,8 +385,7 @@ async function sendToBot(userText) {
         response: botReply,
         text: botReply
     };
-        const data = await response.json();
-
+       
         typingIndicator.hidden = true;
         chatStatus.textContent = "พร้อมให้บริการ";
 
